@@ -55,13 +55,13 @@ code {
   user-select: none;
 }
 
+
 .calcultor-grid{
   display: grid;
   margin-top: 2rem;
   justify-content: center;
   grid-template-columns: repeat(4,6rem);
   grid-template-rows: minmax(7rem,auto) repeat(5,6rem);
-  
 }
 .calcultor-grid > button{
   cursor: pointer;
@@ -73,13 +73,13 @@ code {
 
 .calcultor-grid > button:hover,
 .calcultor-grid > button:focus{
-  background-color: rgba(108, 107, 107, 0.9);
+  background-color: rgba(255,255,255,.9);
 }
 .span-two{
   grid-column: span 2;
 }
 .text{
-  background-color: cadetblue;
+  background-color: rgb(75, 166, 226);
   border: 0px;
   width: 365px;
   height: 100px;
@@ -92,7 +92,7 @@ code {
 }
 .outoput{
   grid-column:  1/-1;
-  background-color: cadetblue;
+  background-color: rgb(75, 166, 226);
   display: flex;
   flex-direction: column;
   align-items: flex-end;

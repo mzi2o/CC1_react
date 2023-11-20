@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 export default function Todo() {
     const [tasks, setTasks] = useState([]);
     const [valeur, setValeur] = useState('');
-    const [style, setStyle] = useState("fs-3 mx-2 form-control w-25");
+    const [style, setStyle] = useState("fs-3 mx-2 form-control w-50");
 
     const handleAddTask = (e) => {
         setValeur(e.target.value);
@@ -43,8 +43,8 @@ export default function Todo() {
     };
 
     return (
-        <div>
-            <p className='fs-4 p-2'>To do list</p>
+        <div >
+            <p className='fs-4 p-5 f'>To do list</p>
             <div className='p-5 d-flex justify-content-center'>
                 <input type='text' className="form-control w-50" onChange={handleAddTask} value={valeur} />
                 <button className='btn btn-info text-white mx-2' onClick={addTask}>
