@@ -43,29 +43,29 @@ export default function Todo() {
     };
 
     return (
-        <div >
+        <div z>
             <p className='fs-4 p-5 f'>To do list</p>
-            <div className='p-5 d-flex justify-content-center'>
-                <input type='text' className="form-control w-50" onChange={handleAddTask} value={valeur} />
-                <button className='btn btn-info text-white mx-2' onClick={addTask}>
+            <div className=' d-flex justify-content-center' id='to'>
+                <input id='inp' type='text' className="form-control w-50 " onChange={handleAddTask} value={valeur} />
+                <button className='btn btn-info text-white mx-2' id='btn' onClick={addTask}>
                     Add A Task
                 </button>
             </div>
-            <div className='p-5 d-flex flex-column justify-content-center mx-5'>
+            <div className='p-5 d-flex flex-column justify-content-center mx-5' id='outputtodo'>
                 {tasks.map((task, index) => (
                     <div key={index} className='d-flex justify-content-center m-2'>
                         <input
                             className={task.completed ? `${style} text-decoration-line-through` : style}
                             type='text'
-                            value={task.value}
+                            value={task.value} id='eout'
                         />
-                        <button className='btn btn-outline-success btn-sm mx-2' onClick={() => endtask(index)}>
+                        <button className='btn btn-outline-success' id='eout' onClick={() => endtask(index)}>
                             End Task
                         </button>
-                        <button className='btn btn-outline-danger btn-sm mx-2' onClick={() => sup(index)}>
+                        <button className='btn btn-outline-danger' id='eout' onClick={() => sup(index)}>
                             Delete
                         </button>
-                        <button type="button" className="btn btn-outline-warning btn-sm mx-2" onClick={() => mod(index)}>
+                        <button type="button" className="btn btn-outline-warning  " id='eout' onClick={() => mod(index)}>
                             Update
                         </button>
                     </div>

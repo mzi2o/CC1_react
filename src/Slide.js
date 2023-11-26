@@ -21,7 +21,7 @@ const Slider = () => {
 
 
   return (
-    <>
+    <div style={{ height: '100%' }}>
       <h2>you are in the {current} image</h2><br/>
       <section className='slider'>
         <input type='button' className='left-arrow' onClick={prevSlide} value="<" />
@@ -32,7 +32,7 @@ const Slider = () => {
           </div>
         ))}
       </section>
-    </>
+    </div>
   );
   
 };

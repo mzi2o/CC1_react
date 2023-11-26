@@ -22,15 +22,15 @@ function Api() {
   };
 
   return (
-    <div className="App">
-      <h1>Todo List</h1>
-      <ul>
+    <div className="App" id='pa'>
+      <h1 id='ti'>jj</h1>
+      <ul id='ul'>
         {todos.map(todo => (
           <li key={todo.id}>{todo.title}</li>
         ))}
       </ul>
-      <button className='btn btn-info text-white mx-2' onClick={handlePreviousPage}>Précédent</button>
-      <button className='btn btn-info text-white mx-2' onClick={handleNextPage}>Suivant</button>
+      <button className='btn btn-info text-white' id='btnpag' onClick={handlePreviousPage}>Précédent</button>
+      <button className='btn btn-info text-white ' id='btnpag'  onClick={handleNextPage}>Suivant</button>
     </div>
   );
 }

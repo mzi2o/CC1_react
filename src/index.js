@@ -3,11 +3,14 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { BrowserRouter } from 'react-router-dom'
+import { BrowserRouter } from 'react-router-dom';
+import Themecontext from './SwitchMode/context/Themecontext'
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter basename='/CC1_react' >
-    <App />
+    <Themecontext>
+      <App />
+    </Themecontext>
   </BrowserRouter>
 );
 

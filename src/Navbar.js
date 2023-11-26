@@ -1,13 +1,22 @@
-import React from 'react';
+import React, { Switch, useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { Navbar as BootstrapNavbar, Nav } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './NavBar.css';
+import './Slider.css';
+import './TODO.css';
+import './Pag.css';
 
-export default function Navbar({ toggleDarkMode, isDarkMode }) {
+import './sal.css';
+import ReactSwitch from 'react-switch';
+import {contextTheme} from "./SwitchMode/context/Themecontext";
+
+
+export default function Navbar() {
+    const {Theme, Togglebtn} = useContext(contextTheme)
     return (
-        <BootstrapNavbar className={`nav-top ${isDarkMode ? 'dark-mode' : 'light-mode'}`} expand="lg">
-            <Link className="navbar-brand p-3" to="/">Home</Link>
+        <BootstrapNavbar className={'nav-top '} expand="lg">
+            <Link className="navbar-brand p-3" to="/" id='a'>Home</Link>
             <BootstrapNavbar.Toggle aria-controls="basic-navbar-nav" />
             <BootstrapNavbar.Collapse id="basic-navbar-nav">
                 <Nav className="mr-auto">
@@ -17,10 +26,9 @@ export default function Navbar({ toggleDarkMode, isDarkMode }) {
                     <Nav.Link as={Link} to="/Pag">PAGINATION</Nav.Link>
                     <Nav.Link as={Link} to="/lang">MULTILANGUAGE</Nav.Link>
                 </Nav>
-                <div className="toggle-mode-btn">
-                    <button onClick={toggleDarkMode}>
-                        {isDarkMode ? 'Light Mode' : 'Dark Mode'}
-                    </button>
+                <div className="switch">
+                    {/* <label> {Theme === 'light' ? 'light Mode': 'Dark Mode'}</label> */}
+                    <ReactSwitch onChange={Togglebtn} checked={Theme === "dark"}/>
                 </div>
             </BootstrapNavbar.Collapse>
         </BootstrapNavbar>
